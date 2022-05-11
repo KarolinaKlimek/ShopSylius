@@ -14,6 +14,33 @@ use Sylius\Component\Product\Model\ProductTranslationInterface;
  */
 class Product extends BaseProduct
 {
+    /**
+     * @var string
+     * @ORM\Column (type="string")
+     */
+    private $colorOption;
+
+    public const COLORS = [
+        'red' => 'Red',
+        'green' => 'Green',
+        'blue' => 'Blue'
+    ];
+
+    static public function getColors()
+    {
+        return self::COLORS;
+    }
+
+    public function getColorOption(): ?string
+    {
+        return $this->colorOption;
+    }
+
+    public function setColorOption(?string $colorOption): void
+    {
+        $this->colorOption = $colorOption;
+    }
+
     protected function createTranslation(): ProductTranslationInterface
     {
         return new ProductTranslation();

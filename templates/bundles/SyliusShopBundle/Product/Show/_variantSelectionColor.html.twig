@@ -1,0 +1,10 @@
+{% from '@SyliusAdmin/Macro/translationForm.html.twig' import translationFormWithSlug %}
+
+{% if product.colorOption is not empty %}
+    <div class="ui segment label">
+        {{ product.colorOption }}
+    </div>
+{% endif %}
+
+
+<div class="ui hidden divider"></div>

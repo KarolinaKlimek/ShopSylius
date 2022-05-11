@@ -1,0 +1,7 @@
+sylius:
+    ui:
+        color:
+            options: 'Choose main product color'
+        colorOption: 'Color Option'
+        
+            

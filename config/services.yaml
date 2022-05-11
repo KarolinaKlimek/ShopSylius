@@ -52,6 +52,9 @@ services:
                   label: 'weight-based'
               }
 
+    app.form.extension.product_type_extension:
+        class: App\Form\Extension\ProductTypeExtension
+        tags: { name: form.type_extension, extended_type: Sylius\Bundle\ProductBundle\Form\Type\ProductType }
 
 
 
